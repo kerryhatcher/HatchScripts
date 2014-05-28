@@ -24,27 +24,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 "
 
-yum -y remove git
 
-wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/6/x86_64/epel-release-6-5.noarch.rpm
+yum-config-manager --enable rhel-6-workstation-thirdparty-oracle-java-rpms
 
-yum -y install epel-release-6-5.noarch.rpm
+yum -y install wget java-1.7.0-oracle java-1.7.0-oracle-devel java-1.7.0-oracle-jdbc java-1.7.0-oracle-plugin
 
-rm -f epel-release-6-5.noarch.rpm
+wget http://download-cf.jetbrains.com/python/pycharm-professional-3.1.3.tar.gz
 
-wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/6/x86_64/ius-release-1.0-11.ius.el6.noarch.rpm
+tar -xzf pycharm-professional-3.1.3.tar.gz
 
-yum -y install ius-release-1.0-11.ius.el6.noarch.rpm
+rm -f pycharm-professional-3.1.3.tar.gz
 
-rm -f ius-release-1.0-11.ius.el6.noarch.rpm
+./pycharm-3.1.3/bin/pycharm.sh
 
-yum -y install git18
-
-echo "
-Git GUI
-"
-yum-config-manager --enable rhel-6-workstation-optional-rpms
-
-yum -y install git18-gui
+rm -rf pycharm-3.1.3
 
 

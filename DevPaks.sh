@@ -24,27 +24,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 "
 
-yum -y remove git
-
-wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/6/x86_64/epel-release-6-5.noarch.rpm
-
-yum -y install epel-release-6-5.noarch.rpm
-
-rm -f epel-release-6-5.noarch.rpm
-
-wget http://dl.iuscommunity.org/pub/ius/stable/Redhat/6/x86_64/ius-release-1.0-11.ius.el6.noarch.rpm
-
-yum -y install ius-release-1.0-11.ius.el6.noarch.rpm
-
-rm -f ius-release-1.0-11.ius.el6.noarch.rpm
-
-yum -y install git18
 
 echo "
-Git GUI
+Python GUI dev Tools
 "
-yum-config-manager --enable rhel-6-workstation-optional-rpms
-
-yum -y install git18-gui
-
-
+yum -y install PyQt4
