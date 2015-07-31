@@ -7,17 +7,17 @@ if (( $EUID != 0 )); then
 fi
 
 
-yum install curl openssh-server
+yum install -y curl openssh-server
 systemctl enable sshd
 systemctl start sshd
-yum install postfix
+yum install -y postfix
 systemctl enable postfix
 systemctl start postfix
 firewall-cmd --permanent --add-service=http
 systemctl reload firewalld
 ./gitlab.rpm.sh
 
-yum install gitlab-ce
+yum install -y gitlab-ce
 
 gitlab-ctl reconfigure
 
