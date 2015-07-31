@@ -6,6 +6,7 @@ if (( $EUID != 0 )); then
     exit
 fi
 
+chmod +x ./gitlab/gitlab.rpm.sh
 
 yum install -y curl openssh-server
 systemctl enable sshd
