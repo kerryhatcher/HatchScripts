@@ -15,7 +15,7 @@ systemctl enable postfix
 systemctl start postfix
 firewall-cmd --permanent --add-service=http
 systemctl reload firewalld
-./gitlab.rpm.sh
+./gitlab/gitlab.rpm.sh
 
 yum install -y gitlab-ce
 
