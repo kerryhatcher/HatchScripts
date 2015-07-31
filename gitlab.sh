@@ -3,6 +3,7 @@ if (( $EUID != 0 )); then
     exit
 fi
 
+chmod +x ./gitlab/gitlab.rpm.sh
 
 read -n1 -p "RHEL Version: [6 or 7]" doit 
 case $doit in  
