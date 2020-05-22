@@ -20,3 +20,10 @@ curl -sSL https://get.rvm.io | bash -s stable
 source ~/.rvm/scripts/rvm
 
 rvm install 2.6.3
+sudo gem install xcode-install
+xcversion install 11.1
+xcversion install 11.4.1
+
+sudo xcodebuild -license accept
+
+brew install carthage
